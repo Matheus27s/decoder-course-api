@@ -35,6 +35,6 @@ public class LessonModel {
     private LocalDateTime creationDate;
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private ModuleModel module;
 }
